@@ -1,0 +1,11 @@
+@mixin seperators($seperator)
+{
+  &:after{
+    content:$seperator;
+  }
+  &:last-child{
+    &:after{
+      content:"";
+    }
+  }
+}

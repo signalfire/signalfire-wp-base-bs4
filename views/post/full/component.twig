@@ -1,0 +1,51 @@
+<article class="post--full" itemscope itemtype="http://schema.org/Article">
+    <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <span itemprop="name" content="{{ site.name }}"></span>
+        <span itemprop="url" content="{{ site.url }}"></span>
+        <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+            <span itemprop="url" content="{{ theme.link }}/build/img/logo.png"></span>
+            <span itemprop="width" content="-"></span>
+            <span itemprop="height" content="-"></span>
+        </span>
+    </span>
+    {% if post.thumbnail and post.thumbnail.width >= 825 %}
+        <p class="post--full__featured" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="{{ post.link }}" title="{{ post.title }}"><img src="{{ post.thumbnail.src('letterbox') }}" class="img-fluid" alt="{{ post.title }}" title="{{ post.title }}"></a>
+            <span itemprop="url" content="{{ post.thumbnail.src }}"></span>
+            <span itemprop="width" content="{{ post.thumbnail.width }}"></span>
+            <span itemprop="height" content="{{ post.thumbnail.height }}"></span>
+        </p>
+    {% endif %}
+    <header>
+        <h2 class="post--full__headline">
+            <a href="{{ post.link }}">
+                <span itemprop="headline">{{ post.title }}</span>
+            </a>
+        </h2>
+        <h3 class="post--full__meta">
+            <span class="post--full__author">
+                <span class="label">Author: </span>
+                <span class="value">
+                    <a href="{{ post.author.link }}">
+                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">{{ post.author|capitalize }}</span>
+                        </span>
+                    </a>
+                </span>
+            </span>
+            <span class="post--full__created">
+                <span class="label">Created: </span>
+                <span class="value" itemprop="datePublished" content="{{ post.date('d/m/Y') }}">{{ post.date('d/m/Y') }}</span>
+            </span>
+            <span class="post--full__updated">
+                <span class="label">Updated: </span>
+                <span class="value" itemprop="dateModified" content="{{ post.modified_date('d/m/Y') }}">{{ post.modified_date('d/m/Y') }}</span>
+            </span>
+            <span class="post--full__comments">
+                <span class="label">Comments: </span>
+                <span class="value" itemprop="commentCount" >{{ post.comments.count }}</span>
+            </span>
+        </h3>
+    </header>
+    <span class="post--full__content">{{post.post_content}}</span>
+</article>

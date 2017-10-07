@@ -1,0 +1,16 @@
+{% if (item.link|trim('/') == url) %}
+    <li {{ (item.get_children) ? 'class="nav-item dropdown active"' : 'class="nav-item active"' }}>
+{% else %}
+    <li {{ (item.get_children) ? 'class="nav-item dropdown"' : 'class="nav-item"' }}>
+{% endif %}
+    <a href="{{ item.link }}" title="{{ item.title }}" {{ (item.get_children) ? 'class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : 'class="nav-link"' }} id="navbar-dropdown-{{ loop.index }}">
+        {{ item.title }}
+    </a>
+    {% if (item.get_children) %}
+        <div class="dropdown-menu" aria-labelledby="navbar-dropdown-{{ loop.index }}">
+            {% for child in item.get_children %}
+                <a href="{{ child.link }}" title="{{ child.title }}" class="dropdown-item">{{ child.title }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+</li>

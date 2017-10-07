@@ -1,0 +1,31 @@
+.post--full__author,
+.post--full__created,
+.post--full__updated,
+.post--excerpt__author,
+.post--excerpt__created,
+.post--excerpt__updated{
+  @include seperators("|");
+}
+.post--full__meta,
+.post--excerpt__meta{
+  font-size:1rem;
+  margin-bottom:1rem;
+}
+.post--full__headline,
+.post--excerpt__headline{
+  font-size:1.5rem;
+  a{
+    color:#333;
+  }
+}
+.post--excerpt__featured,
+.post--full__featured{
+  margin-bottom:0;
+}
+.post--excerpt__content,
+.post--full__content{
+  h4{
+    font-size:1rem;
+    margin-bottom:1rem;
+  }
+}

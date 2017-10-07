@@ -1,0 +1,26 @@
+/*!
+Theme Name: Signalfire WP Base
+Theme URI: http://www.signalfire.co.uk
+Description: Bourbon based HTML theme
+Version: 1.0.0
+Author: Robert Coster
+Author URI: http://www.signalfire.co.uk
+*/
+
+// Bootstrap variables overrides etc
+@import "./settings/catalog";
+
+// Import Bootstrap framework
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Mixins etc.
+@import "./tools/catalog";
+
+// Base elements (e.g. A, IMG etc)
+@import "./base/catalog";
+
+// Components that make up site design
+@import "./components/catalog";
+
+// Styling for third party elements, widgets etc
+@import "./vendor/catalog";
