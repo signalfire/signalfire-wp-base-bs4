@@ -9,7 +9,7 @@
   "author": "Robert Coster <rob@signalfire.co.uk>",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0-beta.2",
     "gulp": "^3.9.1",
     "gulp-bless": "^4.0.0",
     "gulp-concat": "^2.6.1",
