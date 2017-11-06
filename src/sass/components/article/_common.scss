@@ -4,7 +4,6 @@
 .post--excerpt__author,
 .post--excerpt__created,
 .post--excerpt__updated{
-  @include seperators("|");
 }
 .post--full__meta,
 .post--excerpt__meta{

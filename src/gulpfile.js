@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
-var foreach = require('gulp-foreach');
+//var foreach = require('gulp-foreach');
 
 gulp.task('sass',function(){
     gulp.src('./sass/style.scss')
@@ -19,6 +19,14 @@ gulp.task('js:vendor', function(){
         './node_modules/bootstrap/dist/js/bootstrap.js'
     ])
     .pipe(concat('vendor.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('../build/js'))
+});
+
+gulp.task('js:site', function(){
+    gulp.src([
+    ])
+    .pipe(concat('site.js'))
     .pipe(uglify())
     .pipe(gulp.dest('../build/js'))
 });
