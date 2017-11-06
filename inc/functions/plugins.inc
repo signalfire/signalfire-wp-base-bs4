@@ -16,6 +16,11 @@ function sfwpb_register_required_plugins()
       'name' => 'Advanced Custom Fields',
       'slug' => 'advanced-custom-fields',
       'required' => true
+    ],
+    [
+      'name' => 'Ninja Forms',
+      'slug' => 'ninja-forms',
+      'required' => true
     ]
   );
 

@@ -1,7 +1,5 @@
 <?php
 
-require_once get_template_directory() . '/inc/vendor/scssphp/scss.inc.php';
-
 /**
  * Create image sizes
  */

@@ -1,6 +1,6 @@
 # Bootstrap 4 Wordpress Base Theme
 
-Base theme for Bootstrap 4 Alpha for WordPress
+Base theme for Bootstrap 4 Beta 2 for WordPress
 
 Uses Gulp for task runner
 

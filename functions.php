@@ -3,9 +3,6 @@
 // Require TGM Plugin Activator
 require_once get_template_directory() . '/inc/vendor/tgm/class-tgm-plugin-activation.php';
 
-// Setup Timber
-require_once get_template_directory() . '/inc/functions/timber.inc';
-
 // Require helper functions
 require_once get_template_directory() . '/inc/functions/helpers.inc';
 

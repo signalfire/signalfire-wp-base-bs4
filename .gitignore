@@ -2,3 +2,5 @@
 .idea
 src/node_modules
 style.css
+build/js
+build/img

@@ -7,7 +7,7 @@
                         $context = Timber::get_context();
                         $context['posts'] = new Timber\PostQuery(sfwpb_args_for_index());
                         $context['pagination'] = true;
-                        Timber::render('post/list/component.twig', $context);
+                        Timber::render('site/post/list/component.twig', $context);
                     ?>
                 </div>
                 <div class="col-12 col-sm-3">

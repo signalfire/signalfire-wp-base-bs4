@@ -6,7 +6,7 @@
                   <?php
                   $context = Timber::get_context();
                   $context['post'] = Timber::get_post();
-                  Timber::render('post/full/component.twig', $context);
+                  Timber::render('site/post/full/component.twig', $context);
                   ?>
                 </div>
             </div>
