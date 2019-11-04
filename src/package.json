@@ -4,19 +4,22 @@
   "description": "Base WordPress Theme for Signalfire",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "parcel build ./sass/style.scss --out-dir=../build/css --public-url=../css",
+    "sass:watch": "parcel watch ./sass/style.scss --out-dir=../build/css --public-url=../css",
+    "js:site": "parcel build ./js/site.js --out-dir=../build/js --public-url=../js",
+    "js:vendor": "parcel build ./js/vendor.js --out-dir=../build/js --public-url=../js",
+    "js:watch": "parcel build ./js/vendor.js --out-dir=../build/js --public-url=../js"
   },
   "author": "Robert Coster <rob@signalfire.co.uk>",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "gulp": "^3.9.1",
-    "gulp-bless": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-foreach": "^0.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "jquery-match-height": "^0.7.2"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.3"
   }
 }

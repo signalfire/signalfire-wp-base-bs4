@@ -1,8 +1,8 @@
 .DS_Store
 .idea
 src/node_modules
-style.css
 build/js
 build/img
 build/css
-
+src/.cache
+src/yarn-error.log
